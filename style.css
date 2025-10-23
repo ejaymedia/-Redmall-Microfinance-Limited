@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+:root {
+  --red: #b91c1c;
+  --gold: #d4af37;
+  --dark: #1c1b1b;
+  --light: #f8f9fb;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +15,8 @@
 }
 
 body {
-  background: #f8f9fb;
-  color: #222;
+  background: var(--light);
+  color: var(--dark);
   overflow-x: hidden;
 }
 
@@ -37,6 +44,11 @@ body {
   height: 50px;
 }
 
+.logo-area h2 {
+  color: var(--red);
+  line-height: 1.1;
+}
+
 .navbar ul {
   display: flex;
   gap: 30px;
@@ -45,19 +57,19 @@ body {
 
 .navbar ul li a {
   text-decoration: none;
-  color: #11383E;
+  color: var(--dark);
   font-weight: 500;
   transition: 0.3s;
 }
 
 .navbar ul li a:hover {
-  color: #3AB5C6;
+  color: var(--red);
 }
 
 /* Hero */
 .hero {
   height: 85vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(185, 28, 28, 0.7), rgba(0, 0, 0, 0.6)),
     url('./image/image10.jfif') center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -79,16 +91,18 @@ body {
 }
 
 .btn {
-  background: #3AB5C6;
-  color: white;
+  background: var(--gold);
+  color: var(--dark);
   padding: 12px 40px;
   border-radius: 8px;
   text-decoration: none;
+  font-weight: 500;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background: #137c8a;
+  background: var(--red);
+  color: white;
 }
 
 /* Features */
@@ -108,7 +122,7 @@ body {
   background: #fff;
   padding: 40px 20px;
   border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid var(--red);
   transition: 0.3s;
 }
 
@@ -142,7 +156,7 @@ body {
 }
 
 .about-text h4 {
-  color: #3AB5C6;
+  color: var(--red);
   margin-bottom: 15px;
 }
 
@@ -152,7 +166,7 @@ body {
 }
 
 .link {
-  color: #3AB5C6;
+  color: var(--red);
   text-decoration: none;
   font-weight: 500;
 }
@@ -161,6 +175,7 @@ body {
 .services {
   text-align: center;
   padding: 80px 8%;
+  background: var(--light);
 }
 
 .service-grid {
@@ -173,18 +188,18 @@ body {
 .service-card {
   background: #fff;
   padding: 30px 20px;
-  border-left: 4px solid #3AB5C6;
+  border-left: 4px solid var(--gold);
   border-radius: 8px;
   transition: 0.3s;
 }
 
 .service-card:hover {
-  background: #f0fcfd;
+  background: #fff7e1;
 }
 
 /* Testimonials */
 .testimonials {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background: linear-gradient(rgba(185, 28, 28, 0.8), rgba(0, 0, 0, 0.7)),
     url('./image/image9.jfif') center/cover no-repeat;
   color: #fff;
   text-align: center;
@@ -214,7 +229,7 @@ body {
 
 /* Footer */
 footer {
-  background: #11383E;
+  background: var(--dark);
   color: white;
   padding: 70px 8% 30px;
 }
@@ -227,6 +242,7 @@ footer {
 
 .footer-grid h3 {
   margin-bottom: 20px;
+  color: var(--gold);
 }
 
 .footer-grid ul {
@@ -244,13 +260,14 @@ footer {
 }
 
 .footer-grid a:hover {
-  color: #3AB5C6;
+  color: var(--gold);
 }
 
 .socials i {
   margin-right: 10px;
   font-size: 20px;
   cursor: pointer;
+  color: var(--gold);
 }
 
 .footer-note {
